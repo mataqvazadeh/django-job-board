@@ -1,2 +1,2 @@
 # django-job-board
-It is job board application based on Django Rest Framework.
+It is a job board application based on Django Rest Framework.
