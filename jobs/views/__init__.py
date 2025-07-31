@@ -1,2 +1,2 @@
-from job_list import JobListView
-from job_detail import JobDetailView
+from .job_list import JobListView
+from .job_detail import JobDetailView
