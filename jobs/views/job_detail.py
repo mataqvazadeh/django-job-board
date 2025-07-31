@@ -10,5 +10,5 @@ class JobDetailView(GenericAPIView):
     serializer_class = JobSerializer
     lookup_field = 'id'
 
-    def get(self, request):
+    def get(self, request, *args, **kwargs):
         return Response(self.get_serializer(self.get_object()).data)
