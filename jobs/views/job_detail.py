@@ -1,14 +1,10 @@
-from rest_framework.generics import GenericAPIView
-from rest_framework.response import Response
+from rest_framework.generics import RetrieveAPIView
 
 from ..models import Job
 from ..serializers import JobSerializer
 
 
-class JobDetailView(GenericAPIView):
+class JobDetailView(RetrieveAPIView):
     queryset = Job.objects.all()
     serializer_class = JobSerializer
     lookup_field = 'id'
-
-    def get(self, request, *args, **kwargs):
-        return Response(self.get_serializer(self.get_object()).data)
